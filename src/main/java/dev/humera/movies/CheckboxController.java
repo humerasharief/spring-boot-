@@ -10,14 +10,14 @@ import java.util.List;
 import java.util.Optional;
 @RestController
 @CrossOrigin(origins = "http://localhost:3000/")
-@RequestMapping("/api/v1/reminders")
-public class RemindersController {
+@RequestMapping("/api/v1/checkboxes")
+public class CheckboxController {
 
     @Autowired
-    private RemindersService service;
+    private CheckboxService service;
 
     @GetMapping
-    public ResponseEntity<List<Reminders>> getMovies() {
-        return new ResponseEntity<List<Reminders>>(service.findAllReminders(), HttpStatus.OK);
+    public ResponseEntity<List<Checkboxes>> getcheckboxes() {
+        return new ResponseEntity<List<Checkboxes>>(service.Checkboxes(), HttpStatus.OK);
     }
 }
